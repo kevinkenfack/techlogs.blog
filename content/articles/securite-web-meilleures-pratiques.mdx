@@ -1,0 +1,94 @@
+---
+title: "Sécurité Web : Les Meilleures Pratiques pour Protéger Vos Données"
+description: "Apprenez les essentiels de la sécurité web pour protéger votre application et les données de vos utilisateurs contre les menaces modernes."
+date: "2026-01-02"
+category: "securite"
+author: "sarah-martin"
+image: "/artificial-intelligence-security.jpg"
+keywords: ["Sécurité", "Web", "HTTPS", "OWASP", "Protection des données"]
+---
+
+## Introduction à la Sécurité Web
+
+La sécurité web est un élément critique de toute application moderne. Avec l'augmentation des cyberattaques, il est essentiel de comprendre et d'implémenter les meilleures pratiques de sécurité.
+
+## Principaux Risques de Sécurité
+
+### 1. Injection SQL
+
+L'injection SQL est l'une des vulnérabilités les plus courantes et les plus dangereuses.
+
+```javascript
+// ❌ Mauvais - Vulnérable à l'injection SQL
+const query = `SELECT * FROM users WHERE email = '${email}'`
+
+// ✅ Bon - Utiliser les requêtes paramétrées
+const query = 'SELECT * FROM users WHERE email = ?'
+db.query(query, [email])
+```
+
+### 2. Cross-Site Scripting (XSS)
+
+Le XSS permet à un attaquant d'injecter du code malveillant dans le navigateur de l'utilisateur.
+
+```javascript
+// ❌ Mauvais - Vulnerable à XSS
+document.innerHTML = userInput
+
+// ✅ Bon - Échapper le contenu
+const sanitizedInput = DOMPurify.sanitize(userInput)
+document.innerHTML = sanitizedInput
+```
+
+### 3. Cross-Site Request Forgery (CSRF)
+
+Le CSRF force un utilisateur authentifié à effectuer des actions non désirées.
+
+```javascript
+// ✅ Bon - Utiliser des tokens CSRF
+<form method="POST" action="/api/delete">
+  <input type="hidden" name="csrf_token" value={csrfToken} />
+  <button type="submit">Supprimer</button>
+</form>
+```
+
+## Authentification et Autorisation
+
+### Meilleures pratiques d'authentification:
+
+- **Hachage des mots de passe**: Utilisez bcrypt ou Argon2
+- **Sessions sécurisées**: Stockez les sessions côté serveur
+- **JWT responsable**: Définissez des expirations courtes
+- **2FA/MFA**: Mettez en place l'authentification multi-facteurs
+
+```javascript
+// ✅ Bon - Hacher les mots de passe
+const bcrypt = require('bcrypt')
+const hashedPassword = await bcrypt.hash(password, 10)
+const isValid = await bcrypt.compare(password, hashedPassword)
+```
+
+## HTTPS et Chiffrement
+
+Tous les sites web modernes doivent utiliser HTTPS:
+
+- **Certificats SSL/TLS**: Obtenez des certificats valides
+- **HSTS**: Activez le Strict-Transport-Security
+- **CSP**: Définissez une Content Security Policy
+
+## En Pratique
+
+### Checklist de Sécurité:
+
+1. Validez TOUS les inputs utilisateur
+2. Utilisez des requêtes paramétrées pour la base de données
+3. Implémentez la journalisation et la surveillance
+4. Gardez vos dépendances à jour
+5. Effectuez des audits de sécurité réguliers
+6. Formez votre équipe à la sécurité
+7. Planifiez une réponse aux incidents
+
+## Conclusion
+
+La sécurité web n'est jamais "terminée" - c'est un processus continu. En suivant ces bonnes pratiques et en restant vigilant, vous pouvez protéger votre application et vos utilisateurs contre la plupart des menaces courantes.
+```
