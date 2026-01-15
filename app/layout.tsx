@@ -60,7 +60,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-  themeColor: "#12242e",
+  themeColor: "#000000",
 };
 
 export default function RootLayout({
@@ -71,7 +71,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className="dark">
       <body className={`font-sans antialiased`}>
-        <NextTopLoader color="#FFFFFF" showSpinner={false} />
+        <NextTopLoader color="#4dae50" showSpinner={false} />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
