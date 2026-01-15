@@ -172,7 +172,7 @@ export default async function AuthorPage({ params }: AuthorPageProps) {
           {author.content && (
             <div className="relative group mt-12 text-left">
               <div className="absolute inset-0 bg-linear-to-b from-primary/5 to-transparent rounded-lg -z-10 md:group-hover:from-primary/10 transition-colors duration-500" />
-              <div className="md:p-12 md:rounded-lg md:bg-card/50 md:border md:border-border md:backdrop-blur-sm shadow-sm">
+              <div className="md:rounded-lg md:bg-card/50 md:p-12 md:border md:border-border md:backdrop-blur-sm md:shadow-sm">
                 <AuthorMdxContent source={author.content} />
               </div>
             </div>
