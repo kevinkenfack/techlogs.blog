@@ -71,7 +71,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className="dark">
       <body className={`font-sans antialiased`}>
-        <NextTopLoader color="#ffffff" showSpinner={false} />
+        <NextTopLoader color="#e4a2b1" showSpinner={false} />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
