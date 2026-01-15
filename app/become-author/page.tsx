@@ -13,9 +13,23 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Devenir Auteur | TechVision",
-  description:
-    "Guide complet pour contribuer au blog TechVision via GitHub et MDX.",
+  title: `Devenir Auteur | ${siteConfig.name}`,
+  description: `Guide complet pour contribuer au blog ${siteConfig.name} via GitHub et MDX.`,
+  openGraph: {
+    title: `Devenir Auteur | ${siteConfig.name}`,
+    description: `Guide complet pour contribuer au blog ${siteConfig.name} via GitHub et MDX.`,
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/become-author`,
+    type: "website",
+    siteName: siteConfig.name,
+    locale: "fr_FR",
+    images: [siteConfig.ogImage],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `Devenir Auteur | ${siteConfig.name}`,
+    description: `Guide complet pour contribuer au blog ${siteConfig.name} via GitHub et MDX.`,
+    images: [siteConfig.ogImage],
+  },
 };
 
 export default function BecomeAuthorPage() {

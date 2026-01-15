@@ -91,7 +91,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const ogImageUrl = `${baseUrl}/api/og?${ogSearchParams.toString()}`
 
   return {
-    title: `${article.metadata.title} | TechVision`,
+    title: `${article.metadata.title}`,
     description: article.metadata.description,
     keywords: article.metadata.keywords?.split(", "),
     openGraph: {

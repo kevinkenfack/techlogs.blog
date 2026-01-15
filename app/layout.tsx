@@ -13,19 +13,19 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: {
     default: siteConfig.title,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   keywords: ["technologie", "blog", "développement", "innovation", "web"],
-  authors: [{ name: siteConfig.author, url: siteConfig.url }],
+  authors: [{ name: siteConfig.author, url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000' }],
   creator: siteConfig.author,
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
-    url: siteConfig.url,
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
     title: siteConfig.title,
     description: siteConfig.description,
     siteName: siteConfig.name,

@@ -5,13 +5,22 @@ import { getCategoryIcon } from "@/lib/icons"
 import { HighlightAccent } from "@/components/highlight-accent"
 
 export const metadata: Metadata = {
-  title: "Catégories | TechVision",
-  description: "Parcourez tous les sujets et catégories de TechVision",
+  title: "Catégories",
+  description: `Parcourez tous les sujets et catégories de ${siteConfig.name}`,
   openGraph: {
-    title: "Catégories | TechVision",
-    description: "Parcourez tous les sujets et catégories de TechVision",
-    url: `${siteConfig.url}/categories`,
+    title: `Catégories`,
+    description: `Parcourez tous les sujets et catégories de ${siteConfig.name}`,
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/category`,
     type: "website",
+    siteName: siteConfig.name,
+    locale: "fr_FR",
+    images: [siteConfig.ogImage],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `Catégories`,
+    description: `Parcourez tous les sujets et catégories`,
+    images: [siteConfig.ogImage],
   },
 }
 

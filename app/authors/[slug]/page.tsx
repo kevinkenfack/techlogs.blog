@@ -31,10 +31,10 @@ export async function generateMetadata({ params }: AuthorPageProps): Promise<Met
   if (author.avatar) ogUrl.searchParams.set("avatar", `${baseUrl}${author.avatar}`)
 
   return {
-    title: `${author.name} | TechVision`,
+    title: `${author.name}`,
     description: author.bio,
     openGraph: {
-      title: `${author.name} | TechVision`,
+      title: `${author.name}`,
       description: author.bio,
       url: `${baseUrl}/authors/${slug}`,
       type: "profile",

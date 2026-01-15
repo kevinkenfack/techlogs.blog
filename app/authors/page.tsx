@@ -4,10 +4,26 @@ import Image from "next/image"
 import { Metadata } from "next"
 import { HighlightAccent } from "@/components/highlight-accent"
 import { ArrowRight } from "lucide-react"
+import { siteConfig } from "@/lib/config"
 
 export const metadata: Metadata = {
-  title: "Nos Auteurs | TechVision",
-  description: "Découvrez l'équipe derrière TechVision",
+  title: "Nos Auteurs",
+  description: `Découvrez l'équipe derrière ${siteConfig.name}`,
+  openGraph: {
+    title: "Nos Auteurs",
+    description: `Découvrez l'équipe derrière ${siteConfig.name}`,
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/authors`,
+    type: "website",
+    siteName: siteConfig.name,
+    locale: "fr_FR",
+    images: [siteConfig.ogImage],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `Nos Auteurs - ${siteConfig.name}`,
+    description: `Découvrez l'équipe derrière ${siteConfig.name}`,
+    images: [siteConfig.ogImage],
+  },
 }
 
 export default async function AuthorsPage() {

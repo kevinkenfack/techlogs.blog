@@ -5,13 +5,22 @@ import { HighlightAccent } from "@/components/highlight-accent"
 import { ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "À Propos | TechVision",
-  description: "En savoir plus sur TechVision et notre mission",
+  title: "À Propos",
+  description: "En savoir plus sur " + siteConfig.name + " et notre mission",
   openGraph: {
-    title: "À Propos | TechVision",
-    description: "En savoir plus sur TechVision et notre mission",
-    url: `${siteConfig.url}/about`,
+    title: "À Propos",
+    description: "En savoir plus sur " + siteConfig.name + " et notre mission",
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/about`,
     type: "website",
+    siteName: siteConfig.name,
+    locale: "fr_FR",
+    images: [siteConfig.ogImage],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "À Propos - " + siteConfig.name,
+    description: "En savoir plus sur " + siteConfig.name + " et notre mission",
+    images: [siteConfig.ogImage],
   },
 }
 

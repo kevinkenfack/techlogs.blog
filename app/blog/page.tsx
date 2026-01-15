@@ -9,13 +9,22 @@ import { HighlightAccent } from "@/components/highlight-accent"
 import { CategorySelect } from "@/components/category-select"
 
 export const metadata: Metadata = {
-  title: "Blog | TechVision",
-  description: "Tous nos articles technologiques et innovations",
+  title: `Nos Articles`,
+  description: `Découvrez tous nos articles technologiques et innovations`,
   openGraph: {
-    title: "Blog | TechVision",
-    description: "Tous nos articles technologiques et innovations",
-    url: `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/blog`,
+    title: `Nos Articles`,
+    description: `Découvrez tous nos articles technologiques et innovations`,
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/blog`,
     type: "website",
+    siteName: siteConfig.name,
+    locale: "fr_FR",
+    images: [siteConfig.ogImage],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `Nos Articles`,
+    description: `Découvrez tous nos articles technologiques et innovations`,
+    images: [siteConfig.ogImage],
   },
 }
 

@@ -23,13 +23,22 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   }
 
   return {
-    title: `${category.name} | TechVision`,
-    description: `Articles sur ${category.name}`,
+    title: `Article sur ${category.name}`,
+    description: `Découvrez tous nos articles sur ${category.name}`,
     openGraph: {
-      title: `${category.name} | TechVision`,
-      description: `Articles sur ${category.name}`,
-      url: `${siteConfig.url}/categories/${slug}`,
+      title: `Article sur ${category.name}`,
+      description: `Découvrez tous nos articles sur ${category.name}`,
+      url: `${process.env.NEXT_PUBLIC_SITE_URL}/category/${slug}`,
       type: "website",
+      siteName: siteConfig.name,
+      locale: "fr_FR",
+      images: [siteConfig.ogImage],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Article sur ${category.name}`,
+      description: `Découvrez tous nos articles sur ${category.name}`,
+      images: [siteConfig.ogImage],
     },
   }
 }

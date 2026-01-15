@@ -5,8 +5,23 @@ import { Mail, MessageSquare, MapPin, Send, Github, Twitter, Linkedin } from "lu
 import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = {
-  title: "Contact | TechVision",
-  description: "Contactez l'équipe de TechVision pour toute question, suggestion ou partenariat.",
+  title: "Contactez Nous",
+  description: `Contactez l'équipe de ${siteConfig.name} pour toute question, suggestion ou partenariat.`,
+  openGraph: {
+    title: "Contactez Nous",
+    description: `Contactez l'équipe de ${siteConfig.name} pour toute question, suggestion ou partenariat.`,
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/contact`,
+    type: "website",
+    siteName: siteConfig.name,
+    locale: "fr_FR",
+    images: [siteConfig.ogImage],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Contactez Nous",
+    description: `Contactez l'équipe de ${siteConfig.name} pour toute question, suggestion ou partenariat.`,
+    images: [siteConfig.ogImage],
+  },
 }
 
 export default function ContactPage() {
