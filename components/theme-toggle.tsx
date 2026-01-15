@@ -12,7 +12,7 @@ export function ThemeToggle() {
 
   // Function to sync the meta tag
   const updateThemeColor = (theme: string) => {
-    const color = theme === "dark" ? "#12242e" : "#F6E6EE";
+    const color = theme === "dark" ? "#000000" : "#FFFFFF";
 
     // Target all theme-color meta tags
     const metas = document.querySelectorAll('meta[name="theme-color"]');
