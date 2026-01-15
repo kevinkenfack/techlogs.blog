@@ -129,7 +129,7 @@ export default async function AuthorPage({ params }: AuthorPageProps) {
                   />
                 </div>
                 <div className="flex-1 space-y-6">
-                  <p className="text-xl md:text-2xl text-primary font-bold tracking-tight leading-snug">
+                  <p className="text-xl md:text-2xl text-primary italic font-serif font-bold tracking-tight leading-snug">
                     {author.bio}
                   </p>
                   <div className="flex flex-nowrap gap-2 md:gap-3 justify-center md:justify-start overflow-x-auto pb-2 md:pb-0 no-scrollbar">
