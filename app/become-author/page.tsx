@@ -41,7 +41,7 @@ export default function BecomeAuthorPage() {
           <div className="space-y-4">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground tracking-tight leading-[1.1]">
               Contribuez à <br />
-              <HighlightAccent>TechVision</HighlightAccent>
+              <HighlightAccent>{siteConfig.name}</HighlightAccent>
             </h1>
             <p className="text-lg md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4 font-medium">
               Partagez votre expertise technique avec notre communauté en
@@ -199,7 +199,7 @@ Votre contenu commence ici...`}
                   </h3>
                   <ul className="space-y-4">
                     {[
-                      "Forkez le dépôt de TechVision.",
+                      `Forkez le dépôt de ${siteConfig.name}`,
                       "Créez une branche descriptive (ex: feature/article-react19).",
                       "Committez vos fichiers (MDX + Images).",
                       "Ouvrez une Pull Request (PR) vers la branche main.",

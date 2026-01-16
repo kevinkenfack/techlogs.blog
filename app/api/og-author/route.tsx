@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
-
+import { siteConfig } from "@/lib/config"
 export const runtime = "edge";
 
 export async function GET(req: NextRequest) {
@@ -8,7 +8,7 @@ export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
 
     // Dynamic parameters
-    const name = searchParams.get("name") || "Auteur TechVision";
+    const name = searchParams.get("name") || `Auteur ${siteConfig.name}`;
     const bio =
       searchParams.get("bio") ||
       "Expert passionné par la technologie et l'innovation.";
@@ -24,9 +24,9 @@ export async function GET(req: NextRequest) {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "#0a0a0a", // Deep Dark Background
+            backgroundColor: "#000000", // Deep Dark Background
             padding: "80px",
-            fontFamily: "sans-serif",
+            fontFamily: "serif",
             position: "relative",
             overflow: "hidden",
           }}
@@ -109,7 +109,7 @@ export async function GET(req: NextRequest) {
                 alignItems: "center",
                 marginBottom: "24px",
                 backgroundColor: "rgba(255, 255, 255, 0.03)",
-                border: "1px solid rgba(255, 255, 255, 0.08)",
+                border: "1px solid rgba(255, 255, 255, 0.5)",
                 padding: "8px 20px",
                 borderRadius: "8px",
                 alignSelf: "flex-start",
@@ -117,14 +117,14 @@ export async function GET(req: NextRequest) {
             >
               <span
                 style={{
-                  fontSize: "16px",
+                  fontSize: "15px",
                   fontWeight: "900",
-                  color: "#64748b",
+                  color: "white",
                   textTransform: "uppercase",
                   letterSpacing: "0.25em",
                 }}
               >
-                Contributeur TechVision
+                Contributeur {siteConfig.name}
               </span>
             </div>
 
@@ -137,6 +137,7 @@ export async function GET(req: NextRequest) {
                 marginBottom: "32px",
                 lineHeight: 1,
                 letterSpacing: "-0.04em",
+                 fontFamily: "serif",
               }}
             >
               {name}

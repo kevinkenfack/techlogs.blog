@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { siteConfig } from "@/lib/config"
 
 export default function NotFound() {
   return (
@@ -35,7 +36,7 @@ export default function NotFound() {
         <div className="mt-12 p-6 rounded-lg bg-card border border-border/50 shadow-sm">
           <p className="text-muted-foreground">
             Si vous pensez qu'il y a une erreur, veuillez{" "}
-            <a href="mailto:contact@techvision.fr" className="text-foreground hover:underline font-medium decoration-primary decoration-2 underline-offset-4">
+            <a href={`mailto:${siteConfig.links.mail}`} className="text-foreground hover:underline font-medium decoration-primary decoration-2 underline-offset-4">
               nous contacter
             </a>
             .

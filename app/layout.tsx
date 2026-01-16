@@ -52,7 +52,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  generator: "v0.app",
 };
 
 export const viewport: Viewport = {

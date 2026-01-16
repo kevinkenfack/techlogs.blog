@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
+import { siteConfig } from "@/lib/config"
 
 export const runtime = "edge";
 
@@ -8,8 +9,8 @@ export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
 
     // Dynamic parameters
-    const title = searchParams.get("title") || "TechVision Blog";
-    const author = searchParams.get("author") || "L'équipe TechVision";
+    const title = searchParams.get("title") || `${siteConfig.name} Blog`;
+    const author = searchParams.get("author") || `${siteConfig.name}`;
     const date = searchParams.get("date");
     const category = searchParams.get("category") || "Technologie";
 
@@ -23,9 +24,9 @@ export async function GET(req: NextRequest) {
             flexDirection: "column",
             alignItems: "flex-start",
             justifyContent: "center",
-            backgroundColor: "#0#0a0a0a", // Fond très sombre (Slate 950)
+            backgroundColor: "#000000", // Fond très sombre (Slate 950)
             padding: "80px",
-            fontFamily: "sans-serif",
+            fontFamily: "serif",
             position: "relative",
             overflow: "hidden",
           }}
@@ -51,16 +52,16 @@ export async function GET(req: NextRequest) {
               alignItems: "center",
               marginBottom: "40px",
               backgroundColor: "rgba(255, 255, 255, 0.03)",
-              border: "1px solid rgba(255, 255, 255, 0.08)",
-              padding: "8px 24px",
+              border: "1px solid rgba(255, 255, 255, 0.50)",
+              padding: "4px 16px",
               borderRadius: "8px",
             }}
           >
             <span
               style={{
-                fontSize: "18px",
+                fontSize: "15px",
                 fontWeight: "bold",
-                color: "#94a3b8",
+                color: "white",
                 textTransform: "uppercase",
                 letterSpacing: "0.2em",
               }}
@@ -94,7 +95,7 @@ export async function GET(req: NextRequest) {
               marginTop: "auto",
               width: "100%",
               justifyContent: "space-between",
-              borderTop: "1px solid rgba(255, 255, 255, 0.05)",
+              borderTop: "1px solid rgba(255, 255, 255, 0.30)",
               paddingTop: "40px",
             }}
           >
@@ -137,7 +138,7 @@ export async function GET(req: NextRequest) {
                   letterSpacing: "-0.04em",
                 }}
               >
-                TechVision
+                {siteConfig.name}
               </span>
               {date && (
                 <span style={{ fontSize: "18px", color: "#475569", marginTop: "4px", fontWeight: 500 }}>

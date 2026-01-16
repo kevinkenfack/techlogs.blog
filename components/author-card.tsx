@@ -14,7 +14,7 @@ export function AuthorCard({ author, showBio = true }: AuthorCardProps) {
     <Link href={`/authors/${author.slug}`}>
       <div className="flex items-center gap-3 p-4 rounded-lg border border-border hover:border-primary/50 hover:bg-accent active:scale-95 transition-all cursor-pointer shadow-sm hover:shadow-md group">
         <Image
-          src={author.avatar || "/placeholder.svg"}
+          src={author.avatar || "/authors/placeholder-user.jpg"}
           alt={author.name}
           width={48}
           height={48}

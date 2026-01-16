@@ -133,14 +133,14 @@ export function Navbar() {
             <div className="mt-auto w-full pb-12 flex flex-col gap-4">
               <Link
                 href="/become-author"
-                className="w-full text-center px-6 py-4 rounded-lg bg-primary text-primary-foreground font-bold hover:opacity-90 active:scale-95 transition-all duration-200 shadow-lg"
+                className="w-full text-center px-4 py-2 rounded-lg bg-primary text-primary-foreground font-bold hover:opacity-90 active:scale-95 transition-all duration-200 shadow-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Devenir auteur
               </Link>
               <Link
                 href="/contact"
-                className="w-full text-center px-6 py-4 rounded-lg bg-primary/5 border border-border text-primary hover:bg-primary/10 hover:border-primary/50 active:scale-95 transition-all font-bold flex items-center justify-center gap-2 shadow-sm"
+                className="w-full text-center px-4 py-2 rounded-lg bg-primary/5 border border-border text-primary hover:bg-primary/10 hover:border-primary/50 active:scale-95 transition-all font-bold flex items-center justify-center gap-2 shadow-sm"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <span>✉</span>

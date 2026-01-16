@@ -32,7 +32,7 @@ export default function AboutPage() {
           {/* Header */}
           <div className="space-y-4 text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight leading-[1.1]">
-              À Propos de <HighlightAccent>TechVision</HighlightAccent>
+              À Propos de <HighlightAccent>{siteConfig.name}</HighlightAccent>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Votre source d'inspiration pour l'innovation technologique</p>
           </div>
@@ -42,7 +42,7 @@ export default function AboutPage() {
             <div className="space-y-4 p-8 rounded-lg bg-card border border-border shadow-sm">
               <h2 className="text-2xl font-bold text-primary">Notre Mission</h2>
               <p className="text-muted-foreground leading-relaxed">
-                TechVision est un blog technologique dédié à explorer les frontières de l'innovation digitale. Nous
+                {siteConfig.name} est un blog technologique dédié à explorer les frontières de l'innovation digitale. Nous
                 couvrons les dernières tendances en développement web, intelligence artificielle, DevOps et sécurité.
               </p>
             </div>

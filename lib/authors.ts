@@ -70,7 +70,7 @@ function parseFrontmatter(frontmatter: string): AuthorMetadata | null {
     slug: metadata.slug,
     name: metadata.name,
     bio: metadata.bio || "",
-    avatar: metadata.avatar || "/placeholder.svg",
+    avatar: metadata.avatar || "/authors/placeholder-user.jpg",
     email: metadata.email || "",
     twitter: metadata.twitter,
     github: metadata.github,

@@ -41,7 +41,7 @@ export default async function Home() {
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center pt-6 sm:pt-8">
               <Link
                 href="/blog"
-                className="px-6 py-3 sm:px-8 sm:py-4 rounded-lg bg-primary text-primary-foreground font-bold hover:opacity-90 active:scale-95 transition-all text-sm sm:text-base shadow-lg shadow-primary/20 flex items-center justify-center text-center group"
+                className="px-4 py-2 rounded-lg bg-primary text-primary-foreground font-bold hover:opacity-90 active:scale-95 transition-all text-sm sm:text-base shadow-lg shadow-primary/20 flex items-center justify-center text-center group"
               >
                 Explorer nos articles
                 <span className="ml-1 sm:ml-2 group-hover:translate-x-1 transition-transform">→</span>

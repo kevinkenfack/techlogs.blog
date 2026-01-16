@@ -20,7 +20,7 @@ export async function AuthorBadge({ author, date }: AuthorBadgeProps) {
     <Link href={`/authors/${author.slug}`}>
       <div className="flex items-center gap-4 p-6 rounded-lg bg-primary/5 from-primary/10 border border-border hover:border-primary/20 active:scale-95 transition-all cursor-pointer shadow-sm hover:shadow-md group">
         <Image
-          src={author.avatar || "/placeholder.svg"}
+          src={author.avatar || "/authors/placeholder-user.jpg"}
           alt={author.name}
           width={64}
           height={64}

@@ -23,7 +23,7 @@ export function BlogCard({ title, description, date, category, slug, image, auth
       {image && (
         <div className="relative w-full h-48 overflow-hidden bg-accent/50">
           <Image
-            src={image || "/placeholder.svg"}
+            src={image || "/authors/placeholder-user.jpg"}
             alt={title}
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-500"

@@ -31,10 +31,10 @@ export async function generateMetadata({ params }: AuthorPageProps): Promise<Met
   if (author.avatar) ogUrl.searchParams.set("avatar", `${baseUrl}${author.avatar}`)
 
   return {
-    title: `${author.name}`,
+    title: `Profile de ${author.name}`,
     description: author.bio,
     openGraph: {
-      title: `${author.name}`,
+     title: `Découvrez le profil de ${author.name} ainsi que ses publications`,
       description: author.bio,
       url: `${baseUrl}/authors/${slug}`,
       type: "profile",
@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: AuthorPageProps): Promise<Met
     },
     twitter: {
       card: "summary_large_image",
-      title: `${author.name} | TechVision`,
+      title: `Découvrez le profil de ${author.name} ainsi que ses publications`,
       description: author.bio,
       images: [ogUrl.toString()],
     },
@@ -121,7 +121,7 @@ export default async function AuthorPage({ params }: AuthorPageProps) {
                 <div className="relative group/avatar">
                   <div className="absolute -inset-2 bg-primary/10 rounded-lg blur-xl group-hover/avatar:bg-primary/20 transition-all duration-500" />
                   <Image
-                    src={author.avatar || "/placeholder.svg"}
+                    src={author.avatar || "/authors/placeholder-user.jpg"}
                     alt={author.name}
                     width={200}
                     height={200}
@@ -181,7 +181,7 @@ export default async function AuthorPage({ params }: AuthorPageProps) {
           {/* Social Share Profile */}
           <div className="pt-8 border-t border-border flex justify-center">
             <ShareButtons 
-              title={`Découvrez le profil de ${author.name} sur TechVision`} 
+              title={`Découvrez le profil de ${author.name} sur ${siteConfig.name}`} 
               slug={`authors/${slug}`} 
               label="Partager le profil"
             />

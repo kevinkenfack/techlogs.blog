@@ -12,6 +12,7 @@ export const siteConfig = {
     twitter: "https://twitter.com",
     github: "https://github.com",
     linkedin: "https://linkedin.com",
+    mail: "hello@techlogs.blog",
   },
   categories: [
     { slug: "web-dev", name: "Développement Web", icon: "Code" },

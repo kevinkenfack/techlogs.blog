@@ -39,7 +39,7 @@ export default async function AuthorsPage() {
               Nos <HighlightAccent>Auteurs</HighlightAccent>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Retrouvez les experts passionnés qui partagent leur savoir sur TechVision.
+              Retrouvez les experts passionnés qui partagent leur savoir sur {siteConfig.name}.
             </p>
           </div>
 
@@ -52,7 +52,7 @@ export default async function AuthorsPage() {
                   <div className="p-8 flex flex-col items-center border-b border-border bg-accent/30 group-hover:bg-accent/50 transition-colors">
                     <div className="relative w-32 h-32 mb-4 group-hover:scale-105 transition-transform duration-500">
                       <Image
-                        src={author.avatar || "/placeholder.svg"}
+                        src={author.avatar || "/authors/placeholder-user.jpg"}
                         alt={author.name}
                         fill
                         className="rounded-lg object-cover border-4 border-card group-hover:border-primary/50 transition-all shadow-lg"
